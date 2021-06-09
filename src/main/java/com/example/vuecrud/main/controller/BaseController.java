@@ -1,4 +1,4 @@
-package com.example.vuecrud.main;
+package com.example.vuecrud.main.controller;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

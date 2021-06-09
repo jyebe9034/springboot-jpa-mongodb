@@ -1,6 +1,6 @@
-package com.example.vuecrud.main.repository;
+package com.example.vuecrud.main.service;
 
-import com.example.vuecrud.main.MainRepository;
+import com.example.vuecrud.main.repository.MainRepository;
 import com.example.vuecrud.main.domain.Item;
 import com.example.vuecrud.main.domain.Type;
 import lombok.RequiredArgsConstructor;

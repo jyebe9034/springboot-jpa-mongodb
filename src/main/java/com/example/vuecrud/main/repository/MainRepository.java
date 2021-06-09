@@ -1,4 +1,4 @@
-package com.example.vuecrud.main;
+package com.example.vuecrud.main.repository;
 
 import com.example.vuecrud.main.domain.Item;
 import org.springframework.data.mongodb.repository.MongoRepository;

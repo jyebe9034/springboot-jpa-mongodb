@@ -1,8 +1,7 @@
 package com.example.vuecrud.main.controller;
 
-import com.example.vuecrud.main.BaseController;
 import com.example.vuecrud.main.domain.Item;
-import com.example.vuecrud.main.repository.MainService;
+import com.example.vuecrud.main.service.MainService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
