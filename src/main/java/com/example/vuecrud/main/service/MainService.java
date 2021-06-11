@@ -20,14 +20,35 @@ public class MainService {
 
     private final MainRepository mainRepository;
 
+    /**
+     * @Method Name : getAll
+     * @Method 설명 : 전체 검색
+     * @created : 2021. 06. 09.
+     * @Author : jh.lim
+     * @return item list
+     */
     public List<Item> getAll() {
         return mainRepository.findAll();
     }
 
+    /**
+     * @Method Name : getItems
+     * @Method 설명 : 아이템 한개 조회
+     * @created : 2021. 06. 09.
+     * @Author : jh.lim
+     * @return item
+     */
     public Item getItem(String id) {
         return mainRepository.findById(id).isPresent() ? mainRepository.findById(id).get() : null;
     }
 
+    /**
+     * @Method Name : create
+     * @Method 설명 : 아이템 등록
+     * @created : 2021. 06. 09.
+     * @Author : jh.lim
+     * @return id
+     */
     @Transactional
     public String create(Map<String, Object> param) {
         Item item = new Item();
@@ -39,6 +60,12 @@ public class MainService {
         return item.getId();
     }
 
+    /**
+     * @Method Name : update
+     * @Method 설명 : 아이템 수정
+     * @created : 2021. 06. 09.
+     * @Author : jh.lim
+     */
     @Transactional
     public void update(String id, Map<String, Object> param) {
         Optional<Item> byId = mainRepository.findById(id);
@@ -52,16 +79,35 @@ public class MainService {
         }
     }
 
+    /**
+     * @Method Name : deleteAll
+     * @Method 설명 : 전체 삭제
+     * @created : 2021. 06. 09.
+     * @Author : jh.lim
+     */
     @Transactional
     public void deleteAll() {
         mainRepository.deleteAll();
     }
 
+    /**
+     * @Method Name : deleteById
+     * @Method 설명 : 아이템 한개 삭제
+     * @created : 2021. 06. 09.
+     * @Author : jh.lim
+     */
     @Transactional
     public void deleteById(String id) {
         mainRepository.deleteById(id);
     }
 
+    /**
+     * @Method Name : findByTitleLike
+     * @Method 설명 : 제목으로 Like 검색
+     * @created : 2021. 06. 09.
+     * @Author : jh.lim
+     * @return item list
+     */
     public List<Item> findByTitle(String title) {
         return mainRepository.findByTitleLike(title);
     }
